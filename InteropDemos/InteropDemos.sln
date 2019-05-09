@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleMono", "SimpleMono\SimpleMono.csproj", "{33532525-7420-4A61-9017-9D2F1D2FEA2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{49530D22-FAD7-442B-8709-9D0F2A052654}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{33532525-7420-4A61-9017-9D2F1D2FEA2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33532525-7420-4A61-9017-9D2F1D2FEA2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33532525-7420-4A61-9017-9D2F1D2FEA2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33532525-7420-4A61-9017-9D2F1D2FEA2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49530D22-FAD7-442B-8709-9D0F2A052654}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49530D22-FAD7-442B-8709-9D0F2A052654}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49530D22-FAD7-442B-8709-9D0F2A052654}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49530D22-FAD7-442B-8709-9D0F2A052654}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
