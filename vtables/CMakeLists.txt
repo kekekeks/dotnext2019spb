@@ -11,5 +11,5 @@ project(demo)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_library(demos SHARED simple_object.cpp weird_object.cpp complete_object.cpp ids.cpp callback_object.cpp ids.cpp )
+add_library(demos SHARED simple_object.cpp weird_object.cpp complete_object.cpp ids.cpp callback_object.cpp ids.cpp simple_callback.c complete.cpp)
 add_executable(vtables main.c simple_object.cpp)

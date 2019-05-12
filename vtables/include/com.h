@@ -15,8 +15,11 @@ typedef const IID* REFIID;
 typedef unsigned int HRESULT;
 typedef unsigned int DWORD;
 typedef DWORD ULONG;
-
+#ifdef SHARPGEN
+#define STDMETHODCALLTYPE __attribute__((stdcall))
+#else
 #define STDMETHODCALLTYPE
+#endif
 
 #define S_OK                             0x0L
 

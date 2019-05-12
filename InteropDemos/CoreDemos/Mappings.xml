@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config id="AvaloniaNative" xmlns="urn:SharpGen.Config">
+    <assembly>Avalonia.Native</assembly>
+    <namespace>Avalonia.Native.Interop</namespace>
+    <depends>SharpGen.Runtime.COM</depends>
+    <include-dir>$(THIS_CONFIG_PATH)/../../vtables/include/</include-dir>
+    <include file="shared.h" 
+             namespace="CoreDemos.Interop"
+             attach="true"
+             pre="#define COM_GUIDS_MATERIALIZE\#define SHARPGEN\n"/>
+    <include file="com.h" 
+             namespace="CoreDemos.Interop"
+             attach="true"
+             pre="#define COM_GUIDS_MATERIALIZE\n#define SHARPGEN\n"/>
+    <mapping>
+        <remove function=".*" />
+        <map interface="*.Events" callback="true" callback-dual="true" autogen-shadow="true"/>
+        <map interface="*.Callback" callback="true" callback-dual="true" autogen-shadow="true"/>
+        <map param=".*::.*::ppv" return="true"/>
+        <map param=".*::.*::ret" return="true"/>
+        <map param=".*::.*::retOut" attribute="out" return="true"/>
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <map interface="IUtf8String" callback="true" callback-dual="true" autogen-shadow="true"/>
+        <map method=".*::.*" property="false"/>
+        <map method="IUtf8String::GetData" type="void" pointer="*"/>
+    </mapping>
+</config>

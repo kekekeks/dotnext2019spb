@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
+        <CastXmlPath Condition="Exists('/usr/bin/castxml')">/usr/bin/castxml</CastXmlPath>
+        <CastXmlPath Condition="Exists('/usr/local/bin/castxml')">/usr/local/bin/castxml</CastXmlPath>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        
+        <!-- Rider hacks -->
+        <SharpGenGeneratedCodeFolder>$(MSBuildThisFileDirectory)/Generated</SharpGenGeneratedCodeFolder>
+
+    </PropertyGroup>
+    <ItemGroup>
+        <SharpGenMapping Include="Mappings.xml" />
+        <PackageReference Include="SharpGenTools.Sdk" Version="1.1.2" PrivateAssets="all" />
+        <PackageReference Include="SharpGen.Runtime.COM" Version="1.2.0" />
+    </ItemGroup>
+
+</Project>

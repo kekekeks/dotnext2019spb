@@ -1,5 +1,5 @@
 typedef struct IFoo IFoo;
-
+int MySuperFunction(int, char* );
 struct IFoo
 {
 	void (*Test)(IFoo** self, int arg, char* arg2);

@@ -13,7 +13,6 @@ class ComObject : public virtual IUnknown
 private:
 	unsigned int _refCount;
 public:
-
 	virtual ULONG AddRef()
 	{
 		_refCount++;

@@ -8,11 +8,12 @@ namespace SimpleMono
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("PID: "+Process.GetCurrentProcess().Id);
+            Console.WriteLine("PID: " + Process.GetCurrentProcess().Id);
+            DllImportCallbackDemo.Demo();
             //SimpleObjectDemo.Demo();
             //WeirdObjectDemo.Demo();
             //CompleteObjectDemo.Demo();
-            CallbackDemo.Demo();
+            //CallbackDemo.Demo();
         }
     }
 }
