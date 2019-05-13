@@ -11,11 +11,11 @@ namespace SimpleMono
             public IntPtr Test;
         }
 
+        delegate void TestDelegate(IFooVtable** self, int times, [MarshalAs(UnmanagedType.LPUTF8Str)] string text);
+        
         [DllImport(Consts.LibraryPath)]
         static extern IFooVtable** CreateSimpleObject();
 
-        delegate void TestDelegate(IFooVtable** self, int times, [MarshalAs(UnmanagedType.LPUTF8Str)] string text);
-        
         public static void Demo()
         {
             var foo = CreateSimpleObject();

@@ -93,7 +93,7 @@ public:
 
 template<class TInterface, GUID const* TIID> class ComSingleObject : public ComObject, public virtual TInterface
 {
-BEGIN_INTERFACE_MAP()
+	BEGIN_INTERFACE_MAP()
 		INTERFACE_MAP_ENTRY(TInterface, *TIID)
 	END_INTERFACE_MAP()
 

@@ -25,7 +25,7 @@ public:
 		return S_OK;
 	}
 
-	virtual HRESULT STDMETHODCALLTYPE CreateTest(ITest** rv)
+	virtual HRESULT STDMETHODCALLTYPE CreateTest(ITest** rv) override
 	{
 		*rv = CreateCallbackObject();
 		return S_OK;

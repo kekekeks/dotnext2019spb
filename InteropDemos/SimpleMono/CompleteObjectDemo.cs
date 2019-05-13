@@ -15,9 +15,7 @@ namespace SimpleMono
             void Test(int times, [MarshalAs(UnmanagedType.LPUTF8Str)] string x);
         }
 
-        #region Magic
         [return: MarshalAs(UnmanagedType.Interface)]
-        #endregion
         [DllImport(Consts.LibraryPath)]
         static extern IFoo CreateCompleteObject();
 

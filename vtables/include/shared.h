@@ -19,6 +19,9 @@ COMINTERFACE(ITest, 0565100c, a798, 4909, 9b, f4, d4, 2c, aa,b9, e7, 34) : IUnkn
 
 
 
+COMINTERFACE(INativeFactory, 4ff9f886, 3292, 4191, b9, 31, d0, eb, bc, d1, 2a, fe) : IUnknown
+{
+	virtual HRESULT STDMETHODCALLTYPE CreateTest(ITest** ppv) = 0;
 
 
 
@@ -31,21 +34,8 @@ COMINTERFACE(ITest, 0565100c, a798, 4909, 9b, f4, d4, 2c, aa,b9, e7, 34) : IUnkn
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	virtual HRESULT STDMETHODCALLTYPE Concat(IUtf8String* s1, IUtf8String* s2, IUtf8String** ppv) = 0;
+};
 
 
 COMINTERFACE(IUtf8String, fca2c459, 0818, 4cb4, 8d, bd, fd, 98, 4b, cc,a5, 6a) : IUnknown
@@ -53,10 +43,3 @@ COMINTERFACE(IUtf8String, fca2c459, 0818, 4cb4, 8d, bd, fd, 98, 4b, cc,a5, 6a) :
 	virtual int GetLength() = 0;
 	virtual const char* GetData() = 0;
 };
-
-COMINTERFACE(INativeFactory, 4ff9f886, 3292, 4191, b9, 31, d0, eb, bc, d1, 2a, fe) : IUnknown
-{
-	virtual HRESULT STDMETHODCALLTYPE CreateTest(ITest** ppv) = 0;
-	virtual HRESULT STDMETHODCALLTYPE Concat(IUtf8String* s1, IUtf8String* s2, IUtf8String** ppv) = 0;
-};
-

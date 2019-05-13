@@ -12,14 +12,11 @@ namespace Callback {
 		return result;
 	}
 
-	class CallbackTest : public ComObject, public ITest {
+	class CallbackTest : public ComSingleObject<ITest, &IID_ITest> {
 	private:
 		ComPtr<ITestCallback> _cb;
 	public:
 FORWARD_IUNKNOWN()
-BEGIN_INTERFACE_MAP()
-	INTERFACE_MAP_ENTRY(ITest, IID_ITest)
-END_INTERFACE_MAP()
 
 
 		virtual HRESULT Test(int arg, char *arg2) override {
