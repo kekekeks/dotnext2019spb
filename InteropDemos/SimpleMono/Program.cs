@@ -14,6 +14,8 @@ namespace SimpleMono
             //WeirdObjectDemo.Demo();
             //CompleteObjectDemo.Demo();
             //CallbackDemo.Demo();
+            //CompleteObjectDemo.Demo2();
+            //CompleteObjectDemo.Demo3();
         }
     }
 }

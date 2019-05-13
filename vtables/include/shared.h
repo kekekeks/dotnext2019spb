@@ -60,6 +60,3 @@ COMINTERFACE(INativeFactory, 4ff9f886, 3292, 4191, b9, 31, d0, eb, bc, d1, 2a, f
 	virtual HRESULT STDMETHODCALLTYPE Concat(IUtf8String* s1, IUtf8String* s2, IUtf8String** ppv) = 0;
 };
 
-
-extern "C" INativeFactory* CreateNativeFactory();
-

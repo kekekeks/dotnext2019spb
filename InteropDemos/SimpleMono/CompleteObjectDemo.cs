@@ -70,14 +70,18 @@ namespace SimpleMono
             GC.Collect(2);
             GC.WaitForPendingFinalizers();
             Console.WriteLine("Finish");
+            
         }
         
         
         
-        static void Demo3()
+        public static void Demo3()
         {
             var foo = CreateCompleteObject();
             foo.Test(5, "Hello world");
+            Marshal.FinalReleaseComObject(foo);
+            foo = null;
+            Console.WriteLine("Finish");
         }
     }
 }

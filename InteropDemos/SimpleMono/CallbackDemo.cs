@@ -23,7 +23,20 @@ namespace SimpleMono
         {
             void CallMe([MarshalAs(UnmanagedType.LPUTF8Str)] string text, [MarshalAs(UnmanagedType.Interface)]ITest caller);
         }
+        
+        [ComVisible(true), InterfaceType(ComInterfaceType.InterfaceIsIUnknown),
+            Guid("4ff9f886-3292-4191-b931-d0ebbcd12afe"),
+            ComImport
+        ]
+        public interface INativeFactory
+        {
+            [return: MarshalAs(UnmanagedType.Interface)]
+            ITest CreateTest();
+        }
+        
 
+        
+        
         [ComVisible(true)]
         class MyCallback : ITestCallback
         {
@@ -36,12 +49,14 @@ namespace SimpleMono
 
         [return: MarshalAs(UnmanagedType.Interface)]
         [DllImport(Consts.LibraryPath)]
-        static extern ITest CreateCallbackObject();
+        static extern INativeFactory CreateNativeFactory();
 
 
         public static void Demo()
         {
-            var native = CreateCallbackObject();
+            var factory = CreateNativeFactory();
+
+            var native = factory.CreateTest();
             native.SetCallback(new MyCallback());
             native.DoCallback("Test?");
             //native.SetCallback(null);
